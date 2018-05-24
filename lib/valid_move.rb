@@ -1,7 +1,10 @@
 # code your #valid_move? method here
 #returns true when move is valid, false when not valid
-def valid_move(board, index)
+def valid_move?(board, index)
   if !(index.between?(0,8))
+    return false
+  end
+  if (position_taken?(board,index))
     return false
   end
 end
